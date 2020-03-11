@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+</head>
+<body>
+    <h1><%= @course.name %></h1>
+        <p>Professor: <%= @course.professor %></p>
+        <p>Credits: <%= @course.credits %></p>
+    <% if @schedule.total_credits + @course.credits <= 15 %>
+        <form method=POST action='/courses/<%= @course.id %>'>
+            <input type="submit" value="Add Course">
+        </form>
+    <% else %>
+        <h2>Your schedule currently has <%= @schedule.total_credits %> credits</h2>
+        <h2>You will need to remove a class from your schedule to add this class</h2>
+    <% end %>
+
+    <a href='/courses'>Back to course list</a>
+</body>
+</html>

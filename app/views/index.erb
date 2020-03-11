@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+</head>
+<body>
+    <h1>Available Courses:</h1>
+    <ol>
+        <% @courses.each do |course|%>
+            <li>
+                <h2><%= course.name %></h2>
+                <a href="/courses/new/<%= course.id %>">View/Add Course</a>
+            </li>
+        <% end %>
+    </ol>
+</body>
+</html>

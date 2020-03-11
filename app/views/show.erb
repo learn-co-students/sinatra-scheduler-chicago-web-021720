@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+</head>
+<body>
+    <h1>Your Schedule:</h1>
+    <ol>
+        <% @schedule.courses.each do |course|%>
+            <li>
+            <%= course.name %>
+                <ul>
+                    <li>Professor: <%= course.professor %></li>
+                    <li>Credits: <%= course.credits %></li>
+                    <a href='/courses/<%= course.id %>'>Remove from schedule</a>
+                </ul>
+            </li>
+        <% end %>
+    </ol>
+</body>
+</html>
