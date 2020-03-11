@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+</head>
+<body>
+    <h1><%= @added_course.course.name %></h1>
+    <form method=POST action='/schedule/<%= @added_course.id %>'>
+        <input type='hidden' name='_method' value='DELETE'>
+        <input type='submit' value="Confirm removal">
+    </form>
+</body>
+</html>

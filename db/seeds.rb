@@ -1,3 +1,5 @@
+Course.destroy_all
+
 courses = [
   {
     name: 'Transfiguration',
@@ -57,3 +59,9 @@ courses = [
     credits: 1
   }
 ]
+
+courses.each do |course|
+  Course.create(course)
+end
+
+Schedule.create(name: "Hermione")
