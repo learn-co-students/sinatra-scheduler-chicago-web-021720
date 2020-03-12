@@ -1,0 +1,12 @@
+<h3>Course: <%= @course.name  %></h3>
+<h4>Proffessor: <%= @course.professor %></h4>
+<h4>Credits: "<%= @course.credits %>"</h4>
+<h4>Scheduled: "<%= @course.schedule || false %>"</h4>
+
+
+<label>
+<form method='POST' action="/schedule/<%=@course.id%>">
+    <input type="submit" value="add/remove from schedule">
+</form>
+</label>
+<hr>

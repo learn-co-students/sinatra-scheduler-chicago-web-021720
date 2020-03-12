@@ -57,3 +57,6 @@ courses = [
     credits: 1
   }
 ]
+courses.each do |c|
+  Course.create(name: c[:name], professor: c[:professor], credits: c[:credits])
+end 

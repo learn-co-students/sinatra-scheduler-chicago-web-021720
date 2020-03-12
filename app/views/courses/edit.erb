@@ -1,0 +1,14 @@
+<form action="/courses/<%=@course.id%>" method='post'>
+    <input id="hidden" type="hidden" name="_method" value="PATCH">
+
+    <h2><%=@course.name%></h2>
+    <p>New Name: <input type='text' name='name'></p>
+
+    <h2><%=@course.professor%></h2>
+    <p>New Professor: <input type='text' name='professor'></p>
+
+    <h2><%=@course.credits%></h2>
+    <p>New Credits: <input type='text' name='credits'></p>
+
+    <input type='submit'>
+</form>
