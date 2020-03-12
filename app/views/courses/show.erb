@@ -1,0 +1,9 @@
+    <h3>Course: <%= @course.name  %></h3>
+    <h4>Proffessor: <%= @course.professor %></h4>
+    <h4>Credits: "<%= @course.credits %>"</h4>
+<label>
+<form action="/courses/<%=@course.id%>/edit">
+    <button type="submit">edit</button>
+</form>
+</label>
+<hr>
